@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class HealthclusiveSpringApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HealthclusiveSpringApplication.class, args);
+		SpringApplication.run(HealthclusiveSpringApplication.class, args);	
 	}
 
 }
