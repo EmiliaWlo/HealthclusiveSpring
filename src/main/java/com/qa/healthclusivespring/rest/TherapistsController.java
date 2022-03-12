@@ -19,11 +19,10 @@ public class TherapistsController {
 		
 	//create (post request)
 	@PostMapping("/create")
-	public Therapists createMap(@RequestBody Therapists t) {
-		return this.service.create(t);
-		
-		
+	public Therapists createMap(@RequestBody Therapists info) {
+		return this.service.create(info);
+			
 	}
 	
-		
+
 }
