@@ -17,7 +17,7 @@ public class Therapists {
 	private Long id;
 	
 	private String name;
-	private int date;
+	private String date;
 	private String phoneNumber;
 	
 	//3 types of constructors
@@ -29,7 +29,7 @@ public class Therapists {
 	
 	
 	//constructor with everything, including id
-		public Therapists(Long id, String name, int date, String phoneNumber) {
+		public Therapists(Long id, String name, String date, String phoneNumber) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -39,7 +39,7 @@ public class Therapists {
 		
 	
 	//constructor with everything but id
-	public Therapists(String name, int date, String phoneNumber) {
+	public Therapists(String name, String date, String phoneNumber) {
 		super();
 		this.name = name;
 		this.date = date;
@@ -67,12 +67,12 @@ public class Therapists {
 	}
 
 
-	public int getDate() {
+	public String getDate() {
 		return date;
 	}
 
 
-	public void setDate(int date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 
@@ -90,7 +90,7 @@ public class Therapists {
 	//Hashcode and equals
 	@Override
 	public int hashCode() {
-		return Objects.hash(date, id, name, phoneNumber);
+		return Objects.hash(date, name, phoneNumber);
 	}
 
 
@@ -103,7 +103,7 @@ public class Therapists {
 		if (getClass() != obj.getClass())
 			return false;
 		Therapists other = (Therapists) obj;
-		return date == other.date && Objects.equals(id, other.id) && Objects.equals(name, other.name)
+		return date == other.date && Objects.equals(name, other.name)
 				&& Objects.equals(phoneNumber, other.phoneNumber);
 	}
 
