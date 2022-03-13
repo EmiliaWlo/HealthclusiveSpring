@@ -48,12 +48,19 @@ public class TherapistsController {
 		return new ResponseEntity<Therapists>(this.service.readById(id), HttpStatus.OK);	
 	}
 	
+	//custom function
 	@GetMapping("/read/{date}")
 	public ResponseEntity<List<Therapists>> getByDate(@PathVariable String date) {
 		return new ResponseEntity<>(this.service.readByDate(date), HttpStatus.OK);
 		
 	}
+	//custom function
+	@GetMapping("/readByPhoneNumber/{phoneNumber}")
+	public ResponseEntity<List<Therapists>> getByPhoneNumber(@PathVariable String phoneNumber) {
+		return new ResponseEntity<>(this.service.readByPhoneNumber(phoneNumber), HttpStatus.OK);
 		
+	}
+	
 	//update - put request - need id ( you can use path param or path variables) and a body for it
 	
 		

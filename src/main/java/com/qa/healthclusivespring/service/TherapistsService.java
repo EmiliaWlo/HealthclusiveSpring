@@ -40,6 +40,14 @@ public class TherapistsService {
 		
 	}
 	
+	//Additional function  Finding therapists by Phone Number
+	
+	public List<Therapists> readByPhoneNumber(String phoneNumber) {
+		return this.repo.findAllByPhoneNumber(phoneNumber);
+		
+	}
+	
+	
 	
 // update - getters and setters for each field, to update each field
 	// individually
