@@ -32,6 +32,23 @@ public class TherapistsService {
 		Optional<Therapists> op = this.repo.findById(id);
 		return op.get();
 	}
+	
+	//Additional function Finding therapists by date
+	
+	public List<Therapists> readByDate(String date) {
+		return this.repo.findAllByDate(date);
+		
+	}
+	
+	//Additional function  Finding therapists by Phone Number
+	
+	public List<Therapists> readByPhoneNumber(String phoneNumber) {
+		return this.repo.findAllByPhoneNumber(phoneNumber);
+		
+	}
+	
+	
+	
 // update - getters and setters for each field, to update each field
 	// individually
 	public Therapists updateInfo(Long id, Therapists info) {
