@@ -26,6 +26,7 @@ public class ControllerTest {
 	
 	@Test
 	public void testCreate() {
+		
 		Therapists testTherapists = new Therapists(1L, "id", "date", "phoneNumber");
 		
 		when(service.create(testTherapists)).thenReturn(testTherapists);
