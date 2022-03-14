@@ -1,7 +1,9 @@
 package com.qa.healthclusivespring.domain;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -44,10 +46,27 @@ public class DomainTest {
 		EqualsVerifier.simple().forClass(Therapists.class).verify();}
 
 	
-	//@Test //testing toString
-	//public void testToString() {
-		//Therapists = new Therapists
-	//}
+	@Test //testing toString
+	public String testToString() {
+		
+		Therapists = new Therapists();
+			
+		String id = (testToString());
+		Assert.assertEquals(Therapists.toString(), id); //id
+		
+		String date = (testToString());
+		Assert.assertEquals(Therapists.toString(), date); //date
+		
+		String Long = (testToString());
+		Assert.assertEquals(Therapists.toString(), Long); //name
+		
+		String phoneNumber = (testToString());
+		Assert.assertEquals(Therapists.toString(), phoneNumber); //phone number
+		return phoneNumber;
+		
 	
+		}
+		
+		
+	}
 	
-}

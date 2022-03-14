@@ -82,7 +82,8 @@ public class Therapists {
 	public String toString() {
 		return "Therapists [id=" + id + ", name=" + name + ", date=" + date + ", phoneNumber=" + phoneNumber + "]";
 	}
-
+	
+	// hashcode and equals
 	@Override
 	public int hashCode() {
 		return Objects.hash(date, name, phoneNumber);
