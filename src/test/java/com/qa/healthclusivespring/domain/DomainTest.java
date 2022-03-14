@@ -47,23 +47,23 @@ public class DomainTest {
 
 	
 	@Test //testing toString
-	public String testToString() {
+	public void testToString() {
 		
-		Therapists = new Therapists();
-			
-		String id = (testToString());
-		Assert.assertEquals(Therapists.toString(), id); //id
 		
-		String date = (testToString());
-		Assert.assertEquals(Therapists.toString(), date); //date
+		Long id =3L ;
+		 //id
+	
 		
-		String Long = (testToString());
-		Assert.assertEquals(Therapists.toString(), Long); //name
+		String date = "22/05/22";
+		//date
+
+
 		
-		String phoneNumber = (testToString());
-		Assert.assertEquals(Therapists.toString(), phoneNumber); //phone number
-		return phoneNumber;
+		String phoneNumber = "08765088545";
+		String name = " anya";
 		
+		Therapists anya = new Therapists(id, name, date, phoneNumber);
+		Assert.assertEquals(anya.toString(),"Therapists [id=" + id + ", name=" + name + ", date=" + date + ", phoneNumber=" + phoneNumber + "]"); //phone number
 	
 		}
 		
