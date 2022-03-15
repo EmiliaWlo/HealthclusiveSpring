@@ -1,4 +1,4 @@
-package com.qa.healthclusivespring.controller;
+package com.qa.healthclusivespring.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.times;
@@ -11,16 +11,13 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
 import com.qa.healthclusivespring.domain.Therapists;
-import com.qa.healthclusivespring.rest.TherapistsController;
 import com.qa.healthclusivespring.service.TherapistsService;
 
 @SpringBootTest
-public class ControllerTest {
-	
+public class TherapistsControllerUnitTesting {
 	@MockBean
 	private TherapistsService service;
 	
-
 	@Autowired
 	private TherapistsController controller;
 	
@@ -35,9 +32,7 @@ public class ControllerTest {
 	
 		verify(service, times(1)).create(testTherapists);
 		
-		}
-	
-	
-	
+		
 	}
-	
+
+}

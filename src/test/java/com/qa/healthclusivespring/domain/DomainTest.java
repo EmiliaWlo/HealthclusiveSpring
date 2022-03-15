@@ -63,8 +63,8 @@ public class DomainTest {
 		String name = " anya";
 		
 		Therapists anya = new Therapists(id, name, date, phoneNumber);
-		Assert.assertEquals(anya.toString(),"Therapists [id=" + id + ", name=" + name + ", date=" + date + ", phoneNumber=" + phoneNumber + "]"); //phone number
-	
+		Assert.assertEquals(anya.toString(),"Therapists [id=" + id + ", name=" + name + ", date=" + date + ", phoneNumber=" + phoneNumber + "]");
+		
 		}
 		
 		

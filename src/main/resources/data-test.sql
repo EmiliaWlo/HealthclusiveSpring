@@ -1,0 +1,1 @@
+insert into therapists values (0, kate, 22/04/22, 07685674343);
