@@ -12,6 +12,6 @@ public interface TherapistsRepo extends JpaRepository<Therapists, Long> {
 //	@Query(value = "select * from therapists where date")
 	public List<Therapists> findAllByDate(String date);
 	
-	public List<Therapists> findAllByPhoneNumber(String phoneNumber);
+	public Therapists findAllByPhoneNumber(String phoneNumber);
 	
 }
