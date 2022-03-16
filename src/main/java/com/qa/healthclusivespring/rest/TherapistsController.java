@@ -45,7 +45,7 @@ public class TherapistsController {
 		
 	@GetMapping("/get/{id}")
 	public ResponseEntity<Therapists> getTherapists(@PathVariable Long id){
-		return new ResponseEntity<Therapists>(this.service.readById(id), HttpStatus.OK);	
+		return new ResponseEntity<>(this.service.readById(id), HttpStatus.OK);	
 	}
 	
 	//custom function
@@ -56,7 +56,7 @@ public class TherapistsController {
 	}
 	//custom function
 	@GetMapping("/readByPhoneNumber/{phoneNumber}")
-	public ResponseEntity<List<Therapists>> getByPhoneNumber(@PathVariable String phoneNumber) {
+	public ResponseEntity<Therapists> getByPhoneNumber(@PathVariable String phoneNumber) {
 		return new ResponseEntity<>(this.service.readByPhoneNumber(phoneNumber), HttpStatus.OK);
 		
 	}

@@ -41,6 +41,20 @@ public class DomainTest {
 				
 	}
 	
+	//constructor without ID
+	@Test
+	public void constructorWithoutId() {
+		Therapists Therapists  = new Therapists("Anya", "22/05/22", "0764809191");
+		assertNull(Therapists.getId());
+		
+		assertNotNull(Therapists.getName());
+		
+		assertNotNull(Therapists.getDate());
+		
+		assertNotNull(Therapists.getPhoneNumber());
+		
+	}
+	
 	@Test //hashcode and equals
 	public void simpleEqualsContract() {
 		EqualsVerifier.simple().forClass(Therapists.class).verify();}
